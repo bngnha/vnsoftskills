@@ -73,7 +73,8 @@ class BuildBootstrap extends lessc
 			}
 
 
-			$this->setFormatter("compressed");
+			//$this->setFormatter("compressed");
+			$this->setFormatter("");
 
 			$this->setVariables(array(
 					"leftColumns" => $left_columns,
