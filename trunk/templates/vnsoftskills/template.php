@@ -18,6 +18,11 @@ if ($gridMode == 'row-fluid') {
     $containerClass = 'container-fluid';
 }
 
+$bodyclass = "site";
+if ($this->countModules('toolbar')) {
+	$bodyclass = "toolbarpadding";
+}
+
 ?>
 <doctype>
 <html>
@@ -25,7 +30,7 @@ if ($gridMode == 'row-fluid') {
 	
 <w:head />
 </head>
-<body class="site">
+<body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass?>"<?php endif; ?>>
     <?php if ($this->countModules('toolbar')) : ?>
     <!-- menu -->
 	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
@@ -115,12 +120,10 @@ if ($gridMode == 'row-fluid') {
     <!-- footer -->
     <div class="wrapper-footer">
 	    <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
-	    	 <div class="<?php echo $containerClass ?>">
-	    		<?php if ($this->countModules('footer')) : ?>
-					<w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
-			 	<?php endif; ?>
-				<w:footer />
-			</div>
+            <?php if ($this->countModules('footer')) : ?>
+				<w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
+		    <?php endif; ?>
+			<w:footer />
 	    </footer>
     </div>
 	
