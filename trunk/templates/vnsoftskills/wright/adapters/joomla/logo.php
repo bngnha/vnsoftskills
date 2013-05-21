@@ -98,7 +98,6 @@ class WrightAdapterJoomlaLogo
 			$modulewidth2 = floor($modulewidth/2);
 			$modulewidth = ceil($modulewidth/2);
 			$logowidth = 12 - $modulewidth - $modulewidth2;
-			
 			if ($doc->document->params->get('logowidth') !== '12' && ($doc->countModules($modulename) || $doc->countModules($module2name))) {
 				$html .= '<div id="'.$modulename.'" class="span'.$modulewidth.'">';
 				$html .= $this->renderCompanion($modulename,$args,$modulewidth);
