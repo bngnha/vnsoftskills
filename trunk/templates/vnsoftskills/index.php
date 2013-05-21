@@ -20,4 +20,5 @@ require(dirname(__FILE__).'/'.'wright'.'/'.'wright.php');
 
 // Initialize the framework and
 $tpl = Wright::getInstance();
+$tpl->addJSScript(JURI::root().'templates/' . $this->template . '/js/js.js');
 $tpl->display();

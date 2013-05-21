@@ -9,7 +9,7 @@ body.msie-7 #menu ul ul a {height:24px;line-height: 24px;}
 
 .nivoSlider {box-shadow:0px 4px 8px #121212;behavior: url('templates/js_onyx/css/PIE.php');}
 
-a.saleButton.,a.readon {text-shadow: 0px 1px 2px #121212;border-radius:8px;behavior: url('templates/js_onyx/css/PIE.php');}
+a.saleButton,a.readon {text-shadow: 0px 1px 2px #121212;border-radius:8px;behavior: url('templates/js_onyx/css/PIE.php');}
 
 button,
 input[type="reset"],
