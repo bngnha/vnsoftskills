@@ -18,11 +18,6 @@ if ($gridMode == 'row-fluid') {
     $containerClass = 'container-fluid';
 }
 
-$bodyclass = "";
-if ($this->countModules('toolbar')) {
-	$bodyclass = "toolbarpadding";
-}
-
 ?>
 <doctype>
 <html>
@@ -30,7 +25,7 @@ if ($this->countModules('toolbar')) {
 	
 <w:head />
 </head>
-<body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass?>"<?php endif; ?>>
+<body class="site">
     <?php if ($this->countModules('toolbar')) : ?>
     <!-- menu -->
 	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
