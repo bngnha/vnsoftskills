@@ -119,3 +119,40 @@ function modChrome_wrightmenu($module, &$params, &$attribs) {
 	}
 
 }
+
+function modChrome_popover($module, $params, $attribs)
+{
+    if (!empty ($module->content)) : ?>
+        <?php
+        $data_placement = "top";
+        if($attribs['extra'])
+        {
+            $data_placement = $attribs['extra'];
+        }
+        ?>
+        <div class="mod_popover <?php echo $params->get('moduleclass_sfx') ?>">
+            <?php if ($module->showtitle) : ?>
+                <a href="#" data-original-title="" data-placement="<?php echo $data_placement ?>" data-toggle="popover" data-content="<?php echo htmlentities($module->content); ?>"><?php echo $module->title; ?></a>
+            <?php else: ?>
+                <?php echo $module->content; ?>
+            <?php endif; ?>
+        </div>
+    <?php endif;
+}
+
+
+function modChrome_accordion($module, $params, $attribs)
+{
+    if (!empty ($module->content)) : ?>
+        <div class="mod_accordion <?php echo $params->moduleclass_sfx ?>">
+            <?php if ($module->showtitle) : ?>
+                <div class="mod_accordion_title" data-toggle="collapse" data-target="#accoridion<?php echo $module->id ?>" >
+                    <h3><?php echo $module->title; ?></h3>
+                </div>
+            <?php endif; ?>
+            <div id="accoridion<?php echo $module->id ?>"  class="moduletable_content in collapse">
+                <?php echo $module->content; ?>
+            </div>
+        </div>
+    <?php endif;
+}
