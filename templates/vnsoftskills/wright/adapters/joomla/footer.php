@@ -11,9 +11,8 @@ class WrightAdapterJoomlaFooter
 		{
 			
 			$anchors = array(	"Joomla Template" => 50, "Joomla Templates" => 100);
-			$links = array(     "Joomla Templates" => "professional-joomla-templates",	"Joomla Template" => "professional-joomla-templates" );
 			$endlines  = array(	": by JoomlaShack" => 50,	": from JoomlaShack" => 100);
-			$host = "http://www.joomlashack.com/";
+			$host = "http://www.vnsoftskills.com/";
 			$class = 'joomlashack';
 		
 
@@ -44,7 +43,6 @@ class WrightAdapterJoomlaFooter
 			foreach($anchors as $possibility=>$val) {;
 			  if($anchor=='' && $val>$first) {
 					$anchor = $possibility;
-					$host .= $links[$possibility];
 					foreach($endlines as $ends=>$v) {
 						if($endline=='' && $v>$third) { $endline = $ends; }
 					}

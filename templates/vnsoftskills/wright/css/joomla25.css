@@ -105,16 +105,6 @@ h6{
     text-align: center;
 }
 
-a.joomlashack {
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-    text-indent: -1000em;
-    width: 75px;
-    background: url("../images/jscright.png") no-repeat scroll 0 0 transparent;
-}
-
-
 #footer a:hover{
 	color: gray;
 }
@@ -570,7 +560,7 @@ div.disabled{
 	display: block;
 	float: left;
 	margin-right:5px;
-	line-height: 40px;
+	line-height: 30px;
 }
 /* @end */
 

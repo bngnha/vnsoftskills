@@ -36,14 +36,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* @group HTML */
 
-a.joomlashack {
-	display: block;
-	margin: 10px auto;
-	text-align: center;
-	text-indent: -1000em;
-	width: 75px;
-	background: url("../images/jscright.png") no-repeat scroll 0 0 transparent;
-}
 aside a.readmore{
 	margin-bottom: 10px;
 }
