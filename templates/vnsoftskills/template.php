@@ -126,6 +126,6 @@ if ($this->countModules('toolbar')) {
 			<w:footer />
 	    </footer>
     </div>
-	
+
 </body>
 </html>
