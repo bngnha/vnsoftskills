@@ -76,8 +76,8 @@ class jtt_tpl_form extends JoomlaTuneTemplate
 ?>
 <p>
 	<span>
-		<input id="comments-form-homepage" type="text" name="homepage" value="" size="22" tabindex="3" />
 		<label for="comments-form-homepage"><?php echo $text; ?></label>
+		<input id="comments-form-homepage" type="text" name="homepage" value="" size="22" tabindex="3" />
 	</span>
 </p>
 <?php
@@ -100,7 +100,7 @@ class jtt_tpl_form extends JoomlaTuneTemplate
 	</span>
 </p>
 <?php
-		if ($this->getVar('comments-form-subscribe', 0) == 1) {
+		if ($this->getVar('comments-form-subscribe', 0) == 5) { // 1 -> 5: Modify to do not display
 ?>
 <p>
 	<span>
