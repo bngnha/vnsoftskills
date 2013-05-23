@@ -54,8 +54,8 @@ class jtt_tpl_form extends JoomlaTuneTemplate
 ?>
 <p>
 	<span>
-		<input id="comments-form-name" type="text" name="name" value="" maxlength="<?php echo $this->getVar('comment-name-maxlength');?>" size="22" tabindex="1" />
 		<label for="comments-form-name"><?php echo $text; ?></label>
+		<input id="comments-form-name" type="text" name="name" value="" maxlength="<?php echo $this->getVar('comment-name-maxlength');?>" size="22" tabindex="1" />
 	</span>
 </p>
 <?php
@@ -65,8 +65,8 @@ class jtt_tpl_form extends JoomlaTuneTemplate
 ?>
 <p>
 	<span>
-		<input id="comments-form-email" type="text" name="email" value="" size="22" tabindex="2" />
 		<label for="comments-form-email"><?php echo $text; ?></label>
+		<input id="comments-form-email" type="text" name="email" value="" size="22" tabindex="2" />
 	</span>
 </p>
 <?php
@@ -87,8 +87,8 @@ class jtt_tpl_form extends JoomlaTuneTemplate
 ?>
 <p>
 	<span>
-		<input id="comments-form-title" type="text" name="title" value="" size="22" tabindex="4" />
 		<label for="comments-form-title"><?php echo $text; ?></label>
+		<input id="comments-form-title" type="text" name="title" value="" size="22" tabindex="4" />
 	</span>
 </p>
 <?php
