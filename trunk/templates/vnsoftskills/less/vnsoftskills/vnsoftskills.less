@@ -14,17 +14,12 @@
   width: inherit !important;
 }
 
-#comments-form{
-  margin: 0 0 10px;
-}
-
 *
 {
 	.box-sizing(border-box);
 }
 
 @import "mixins.less";
-.gridRedWeb .grid('');
 
 .category_pagination {
   margin: @baseLineHeight 0;
@@ -109,4 +104,30 @@
   .mod_accordion_title {
     cursor: pointer;
   }
+}
+
+.well h3{
+  margin-bottom: 0px;
+}
+
+.counter {
+  line-height: 33px;
+}
+
+.well{
+  background-color: #FBFBFB;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02) inset;
+}
+
+#comments-form input {
+  width: 39%;
+}
+
+#comments-form{
+  margin: 0 0 10px;
+}
+
+#comments-form label {
+  float: none;
+  margin-bottom: 2px;
 }
