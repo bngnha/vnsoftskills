@@ -91,8 +91,8 @@ div.comments-policy ol, div.comments-policy ul {margin: 0;padding: 5px 0 0 20px;
 div.comments-policy ol li, div.comments-policy ul li {font: normal 1em Verdana, Arial, Sans-Serif; margin: 0;padding: 0;border: none;line-height: 5px}
 
 #comments-form, #comments-form p, #comments-report-form, #comments-report-form p, #comments-form span, #comments-form .counter {text-align: left;text-decoration: none;text-transform: none;text-indent: 0}
-#comments-form p, #comments-report-form p, #comments-form span, #comments-form .counter {color: #777;font: normal 1em Verdana, Arial, Sans-Serif}
-#comments-form p, #comments-form #comments-form-buttons, #comments-form #comments-form-error, #comments-form #comments-form-captcha-holder {font: normal 1em Verdana, Arial, Sans-Serif;margin-left: 20px !important;margin-top: 10px;margin-bottom: 8px;overflow: hidden;padding: 0}
+#comments-form p, #comments-report-form p, #comments-form span, #comments-form .counter {color: #353535;font: normal 1em Verdana, Arial, Sans-Serif}
+#comments-form p, #comments-form #comments-form-buttons, #comments-form #comments-form-error, #comments-form #comments-form-captcha-holder {font: normal 1em Verdana, Arial, Sans-Serif;margin-top: 10px;margin-bottom: 8px;overflow: hidden;padding: 0}
 
 #comments-inline-edit {border: 1px solid #ccc;margin: 5px 0 0 0;background: #fff}
 #comments-inline-edit #comments-form p, #comments-inline-edit #comments-form #comments-form-buttons,
@@ -100,10 +100,10 @@ div.comments-policy ol li, div.comments-policy ul li {font: normal 1em Verdana, 
 
 #comments-form img.smile {margin: 0 3px 3px 0;padding: 0;border: none;cursor: pointer}
 #comments-form img.captcha {padding: 0;margin: 0 0 3px 0;border: 1px solid #ccc}
-#comments-form span.captcha {padding: 0 0 0 12px; color: #777; background: url(images/jc_refreshg.gif) no-repeat 0 2px;cursor: pointer; display: inline-block}
-#comments-form label, #comments-report-form label {color: #777; background-color: inherit; line-height: 1.5em; padding: 0;margin: 0;vertical-align: middle}
+#comments-form span.captcha {padding: 0 0 0 12px; color: #353535; background: url(images/jc_refreshg.gif) no-repeat 0 2px;cursor: pointer; display: inline-block}
+#comments-form label, #comments-report-form label {color: #353535; background-color: inherit; line-height: 1.5em; padding: 0;margin: 0;vertical-align: middle}
 #comments-form input, #comments-report-form input, #comments-form textarea {color: #444;background-color: #fff;padding: 0 !important;margin: 0;border: 1px solid #ccc}
-#comments-form input {width: 170px;margin-bottom: 2px;height: 1.5em}
+#comments-form input {width: 170px;margin-bottom: 2px;height: 2em}
 #comments-form input.selected, #comments-form textarea.selected {color: #777;background-color: #ffffe0 !important;border: 1px solid #849B9F}
 #comments-form input.error, #comments-form textarea.error {border: 1px solid #f00;text-decoration:none;text-transform:none;background-color: #ffffe0}
 
@@ -122,13 +122,13 @@ div.comments-policy ol li, div.comments-policy ul li {font: normal 1em Verdana, 
 #comments-form .grippie span {display:block;float:left}
 #comments-form .grippie span span {display:inline;float:none}
 
-#comments-form .btn, #comments-report-form .btn {float: left; background: url(images/jc_btnl.gif) no-repeat; margin-right: 5px}
-#comments-form .btn div, #comments-report-form .btn div {margin:0 -1px 0 0; float: left;background: url(images/jc_btnr.gif) 100% 0 no-repeat}
+#comments-form .btn, #comments-report-form .btn {float: left; margin-right: 5px}
+#comments-form .btn div, #comments-report-form .btn div {margin:0 -1px 0 0; float: left}
 #comments-form .btn a, #comments-report-form .btn a {text-decoration: none; height: 22px;line-height: 22px;font-size: 12px;font-weight: bold;color: #777;padding: 0 5px;border: none}
 #comments-form .btn a:hover, #comments-form .btn a:focus, #comments-report-form .btn a:hover, #comments-report-form .btn a:focus {text-decoration: none; color: #0B55C4;background-color: transparent}
 #comments-form-smilespanel {display: none;cursor: pointer;padding: 2px;max-width: 200px;background-color: #fff;border: 1px solid #ccc;overflow: auto;left: 0;top: 0;position:absolute;z-index: 999999 !important;}
 
-#comments-footer, #comments-footer a {color: #ccc !important; background-color: inherit; font: normal 9px Verdana, Arial, Sans-Serif !important}
+#comments-footer, #comments-footer a {color: #ccc !important; background-color: inherit;}
 #comments-footer {display: block;height: 14px;border-top: 1px solid #ccc;padding-top: 1px;margin-top: 4px;text-align: right}
 #comments-footer a {text-decoration: none !important;text-transform: none;padding: 0;margin: 0;border: none !important;float: right; background: none !important}
 
