@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System Fitvids</name>
+	<author>Joomla Bamboo</author>
+	<creationDate>April 12, 2013</creationDate>
+	<copyright>Copyright (c) 2013 Joomla Bamboo. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>design@joomlabamboo.com</authorEmail>
+	<authorUrl>www.joomlabamboo.com</authorUrl>
+	<version>1.0.5</version>
+	<description>A simple plugin to add responsive video javascript and css to a page. Please note that to use this plugin you need to have jQuery loading on your site. If you are using a Zen Grid Framework version2 template then you don't need do do anything else. Otherwise you can use the Joomlabamboo JB  Library plugin (http:www.joomlabamboo.com) or any of the other jQuery plugins that provide this functionality. This plugin uses the Fitvids.js (http://fitvidsjs.com/) script created by Chris Coyler (http://chriscoyier.net/) and Paravel (http://paravelinc.com/).</description>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<file plugin="fitvids">fitvids.php</file>
+		<filename>index.html</filename>
+		<folder>media</folder>
+	</files>
+	<media destination="fitvids" folder="media/fitvids">
+		<file>jquery.fitvids.js</file>
+		<file>jquery.fitvids.min.js</file>
+	</media>
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/jblibrary/fields">
+			<fieldset name="fitvids" group="fitvids" label="Fit Vid Options">
+				<field name="fitVidSelector" type="textarea" default=".container" label="Fitvid Selector" description="Enter the specific selector that you wish to target on your website. This value needs to be the parent html container that holds the video that you will be displaying on your site. For Zen Grid Framework version 2 templates adding #mainContent for this option will allow videos to be displayed responsively within the main content area." />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
