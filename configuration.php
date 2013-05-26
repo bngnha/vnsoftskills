@@ -1,7 +1,7 @@
 <?php
 class JConfig {
 	public $offline = '0';
-	public $offline_message = 'This site is down for maintenance.<br /> Please check back again soon.';
+	public $offline_message = 'Website đang bảo trì.<br /> Xin quay lại vào lần sau.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
 	public $sitename = 'Vn Soft Skills';
@@ -42,16 +42,16 @@ class JConfig {
 	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '15';
-	public $MetaDesc = '';
-	public $MetaKeys = '';
+	public $MetaDesc = 'VN Soft Skills';
+	public $MetaKeys = 'VN, Soft Skills, Kỹ năng mềm, Kỹ năng, Phát triển năng lực cá nhân, rèn luyện nhân cách';
 	public $MetaTitle = '1';
 	public $MetaAuthor = '1';
 	public $MetaVersion = '0';
 	public $robots = '';
-	public $sef = '1';
-	public $sef_rewrite = '1';
-	public $sef_suffix = '1';
-	public $unicodeslugs = '1';
+	public $sef = '0';
+	public $sef_rewrite = '0';
+	public $sef_suffix = '0';
+	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $log_path = 'D:\\xampp\\htdocs\\vnsoftskills/logs';
 	public $tmp_path = 'D:\\xampp\\htdocs\\vnsoftskills/tmp';
