@@ -258,7 +258,7 @@ function tableOrdering(order, dir, task)
 			$link = JCOMMENTS_INDEX . '?option=com_jcomments&task=comments.edit&hidemainmenu=1&cid='. $row->id;
 ?>
 	<tr class="<?php echo "row$k"; ?>">
-			<td align="center"><?php echo JCommentsHTML::_('grid.checkedout', $row, $i); ?></td>
+			<td align="center"><?php //echo JCommentsHTML::_('grid.checkedout', $row, $i); ?></td>
 			<td align="left">
 <?php
 			if ($row->checked_out && ($row->checked_out != $user->id)) {
