@@ -21,14 +21,16 @@
 
 @media (max-width: @navbarCollapseWidth) {
   .navbar .nav li.active.dropdown ul.dropdown-menu,
-  .navbar .nav li:hover ul.dropdown-menu
-  {
-
+  .navbar .nav li:hover ul.dropdown-menu  {
     display: block;
     &.sub-menu
     {
       position: static;
       visibility: visible;
     }
+  }
+
+  .fluid-width-video-wrapper {
+	width: 100% !important;
   }
 }
