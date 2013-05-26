@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Restricted Area"
 AuthUserFile /home/vnsoftsk/.htpasswds/public_html/administrator/cache/.htpasswd
-require user bngnha
+require user vnsoftskills
