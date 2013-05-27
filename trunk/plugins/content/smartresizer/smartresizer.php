@@ -120,7 +120,7 @@ class plgContentSmartResizer extends JPlugin
 		if (($option = JRequest::getVar('option', '')) != 'com_content')
 		{
 			//$this->onPrepareContent( $article, $params, $limitstart );
-			$this->processSmartResizer($article);
+			$this->autoResizerProcess($article);
 		}
 	}	
 	
@@ -130,11 +130,11 @@ class plgContentSmartResizer extends JPlugin
 		if (($option = JRequest::getVar('option', '')) == 'com_content')
 		{
 			//$this->onPrepareContent( $article, $params, $limitstart );
-			$this->processSmartResizer($article);
+			$this->autoResizerProcess($article);
 		}
 	}
 
-	function processSmartResizer(&$article)
+	function autoResizerProcess(&$article)
 	{
 		$app = JFactory::getApplication();
 		if (get_class($app) === "JAdministrator" )
@@ -178,42 +178,40 @@ class plgContentSmartResizer extends JPlugin
 			}
 		}
 
-		$resize_image_intro = $pluginParams->def( 'resize_image_intro', '0');
-		$resize_image_article = $pluginParams->def( 'resize_image_article', '0');
+		$resize_image_intro = $pluginParams->def('resize_image_intro', '0');
+		$resize_image_article = $pluginParams->def('resize_image_article', '0');
 		if(!$resize_image_intro && !$resize_image_article)
 		{
 			return true;
 		}
 
 		// resize image intro
-		$is_resize_image_intro = false;
 		if($resize_image_intro && !$resize_image_article)
 		{
 			if(empty($image_infos['image_intro']))
 			{
 				return true;
 			}
-			$is_resize_image_intro = true;
 		}
 
 		// resize image fulltext
-		$is_resize_image_fulltext = false;
 		if(!$resize_image_intro && $resize_image_article)
 		{
 			if(empty($image_infos['image_fulltext']))
 			{
 				return true;
 			}
-			$is_resize_image_fulltext = true;
 		}
 
 		// process convert image
-		if($is_resize_image_intro)
+		if($resize_image_intro)
 		{
-			//
+			// Get parameter for image intro
+
+
 		}
 
-		if($is_resize_image_fulltext)
+		if($resize_image_article)
 		{
 
 		}

@@ -42,15 +42,15 @@
 
 			<field name="thumb_width" type="text" default="" label="Thumbnail_width_for_blogs" description="THUMBNAIL_WIDTH_FOR_BLOGS_DESC" />
 			<field name="thumb_height" type="text" default="" label="Thumbnail_height_for_blogs" description="THUMBNAIL_HEIGHT_FOR_BLOGS_DESC" />
-			
+
 			<field name="thumb_medium_width" type="text" default="" label="Default_thumbnail_width_for_articles" description="DEFAULT_THUMBNAIL_WIDTH_FOR_ARTICLES_DESC" />
 			<field name="thumb_medium_height" type="text" default="" label="Default_thumbnail_height_for_articles" description="DEFAULT_THUMBNAIL_HEIGHT_FOR_ARTICLES_DESC" />
-			
+
 			<field name="spacer1" type="spacer"	hr="true" />
-			
+
 			<field name="thumb_other_width" type="text" default="" label="Default_thumbnail_width_for_others" description="DEFAULT_THUMBNAIL_WIDTH_FOR_OTHERS_DESC" />
 			<field name="thumb_other_height" type="text" default="" label="Default_thumbnail_height_for_others" description="DEFAULT_THUMBNAIL_HEIGHT_FOR_OTHERS_DESC" />
-			
+
 			<field name="spacer2" type="spacer"	hr="true" />
 
 			<field name="uselargethumb" type="radio" default="0" label="USE_LARGE_THUMBNAIL" description="USE_LARGE_THUMBNAIL_DESC">
@@ -65,19 +65,19 @@
 				<option value="0">JNO</option>
 				<option value="1">JYES</option>
 			</field>
-			
+
 			<field name="ignoreindividual" type="radio" default="0" label="Ignore_individual_image_size" description="IGNORE_INDIVIDUAL_IMAGE_SIZE_DESC">
 				<option value="0">JNO</option>
 				<option value="1">JYES</option>
 			</field>
-			
+
 			<field name="readmorelink" type="radio" default="1" label="Create_link_on_article_in_blogs" description="Create_link_DESC">
 				<option value="0">JNO</option>
 				<option value="1">JYES</option>
 			</field>
-			
+
 			<field name="spacer1" type="spacer"	hr="true" />
-			
+
 			<field name="imgstyleblog" type="text" size="60" default="" label="Image_style_for_blog" description="Image_style_DESC" />
 			<field name="imgstylearticle" type="text" size="60" default="" label="Image_style_for_article" description="Image_style_DESC" />
 			<field name="imgstyleother" type="text" size="60" default="" label="Image_style_for_other_content" description="Image_style_DESC" />
