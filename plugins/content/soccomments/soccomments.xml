@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7.0" type="plugin" group="content" method="upgrade">
+	<name>Content - SocComments</name>
+	<author>tallib</author>
+	<creationDate>March 2012</creationDate>
+	<copyright>Copyright (C) 2012 FreeJoom.ru. All rights reserved.</copyright>
+	<authorEmail>sale@Rcreated.com</authorEmail>
+	<authorUrl>http://freejoom.ru/</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.3.0</version>
+	<description>PLG_CONTENT_SOCCOMMENTS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="soccomments">soccomments.php</filename>
+		<filename>soc/css/soccomments.css</filename>
+		<filename>soc/css/facebook.png</filename>
+		<filename>soc/css/vkontakte.png</filename>
+		<filename>soc/css/chat.png</filename>
+		<filename>soc/css/disqus.png</filename>
+		<filename>soc/css/secret.png</filename>
+		<filename>soc/js/jquery-ui-1.8.16.custom.min.js</filename>
+		<filename>soc/js/jsoccomments.js</filename>
+		<folder>language</folder>
+		<folder>soc</folder>
+		</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+<field name="spacer1" type="spacer" class="text" label="--------FACEBOOK COMMENTS--------"/>	
+
+				<field name="FacebookComments" 
+					type="radio" 
+					default="1" 
+					label="PLG_SOCCOMMENTS_FB_SHOW" 
+					description="PLG_SOCCOMMENTS_FB_SHOW_DESC" >
+					<option value="1">PLG_SOCCOMMENTS_YES</option>
+					<option value="0">PLG_SOCCOMMENTS_NO</option>
+				</field>
+				<field name="fb_show_og_tag"
+					type="radio" 
+					default="1" 
+					label="PLG_SOCCOMMENTS_SHOW_OG_TAG" 
+					description="PLG_SOCCOMMENTS_SHOW_OG_TAG2">
+					<option value="1">PLG_SOCCOMMENTS_YES</option>
+					<option value="0">PLG_SOCCOMMENTS_NO</option>
+				</field>
+				
+				<field name="fb_text"
+				    type="text" 
+				    default="Facebook"
+				    label="PLG_SOCCOMMENTS_FB_TEXT" 
+				    description="PLG_SOCCOMMENTS_FB_TEXT_DESC" />
+				
+				<field name="fb_id"
+				    type="text" 
+				    default=""
+				    label="PLG_SOCCOMMENTS_FB_ID" 
+				    description="PLG_SOCCOMMENTS_FB_ID_DESC" />
+				
+				<field name="fb_admin_id"
+				    type="text" 
+				    default=""
+				    label="PLG_SOCCOMMENTS_FB_ADMIN_ID" 
+				    description="PLG_SOCCOMMENTS_FB_ADMIN_ID_DESC" />
+
+				<field name="fbcomments_width" type="text" 
+					default="500" 
+					label="PLG_SOCCOMMENTS_FB_WIDTH" 
+					description="PLG_SOCCOMMENTS_FB_WIDTH_DESC" />
+					
+				<field name="fb_num"
+				    type="text" default="10"
+				    label="PLG_SOCCOMMENTS_FB_NUM" 
+				    description="PLG_SOCCOMMENTS_FB_NUM_DESC" />
+					
+				<field name="fb_order"
+				    type="text" default="1"
+				    label="PLG_SOCCOMMENTS_FB_ORDER" 
+				    description="PLG_SOCCOMMENTS_FB_ORDER_DESC" />
+					
+				<field name="fbcomments_color" 
+					type="list" 
+					default="light" 
+					label="PLG_SOCCOMMENTS_FB_COLOR" 
+					description="PLG_SOCCOMMENTS_FB_COLOR_DESC">
+					<option value="light">PLG_SOCCOMMENTS_FB_LIGHT</option>
+					<option value="dark">PLG_SOCCOMMENTS_FB_DARK</option>
+				</field>
+				
+				<field name="fbcomments_lang" 
+					type="list" 
+					default="en_US" 
+					label="PLG_SOCCOMMENTS_FB_LANG" 
+					description="PLG_SOCCOMMENTS_FB_LANG_DESC">
+					<option value="af_ZA">Afrikaans</option>
+			<option value="ar_AR">Arabic</option>
+			<option value="ay_BO">Aymara</option>
+			<option value="az_AZ">Azeri</option>
+			<option value="be_BY">Belarusian</option>
+			<option value="bg_BG">Bulgarian</option>
+			<option value="bn_IN">Bengali</option>
+			<option value="bs_BA">Bosnian</option>
+			<option value="ca_ES">Catalan</option>
+			<option value="ck_US">Cherokee</option>
+			<option value="cs_CZ">Czech</option>
+			<option value="cy_GB">Welsh</option>
+			<option value="da_DK">Danish</option>
+			<option value="de_DE">German</option>
+			<option value="el_GR">Greek</option>
+			<option value="en_GB">English (UK)</option>
+			<option value="en_PI">English (Pirate)</option>
+			<option value="en_UD">English (Upside Down)</option>
+			<option value="en_US">English [US]</option>
+			<option value="eo_EO">Esperanto</option>
+			<option value="es_CL">Spanish (Chile)</option>
+			<option value="es_CO">Spanish (Colombia)</option>
+			<option value="es_ES">Spanish (Spain)</option>
+			<option value="es_LA">Spanish</option>
+			<option value="es_MX">Spanish (Mexico)</option>
+			<option value="es_VE">Spanish (Mexico)</option>
+			<option value="et_EE">Estonian</option>
+			<option value="eu_ES">Basque</option>
+			<option value="fa_IR">Persian</option>
+			<option value="fb_LT">Leet Speak</option>
+			<option value="fi_FI">Finnish</option>
+			<option value="fo_FO">Faroese</option>
+			<option value="fr_CA">French (Canada)</option>
+			<option value="fr_FR">French (France)</option>
+			<option value="ga_IE">Irish</option>
+			<option value="gl_ES">Galician</option>
+			<option value="gn_PY">Guarani</option>
+			<option value="gu_IN">Gujarati</option>
+			<option value="he_IL">Hebrew</option>
+			<option value="hi_IN">Hindi</option>
+			<option value="hr_HR">Croatian</option>
+			<option value="hu_HU">Hungarian</option>
+			<option value="hy_AM">Armenian</option>
+			<option value="id_ID">Indonesian</option>
+			<option value="is_IS">Icelandic</option>
+			<option value="it_IT">Italian</option>
+			<option value="ja_JP">Japanese</option>
+			<option value="jv_ID">Javanese</option>
+			<option value="ka_GE">Georgian</option>
+			<option value="kk_KZ">Kazakh</option>
+			<option value="km_KH">Khmer</option>
+			<option value="kn_IN">Kannada</option>
+			<option value="ko_KR">Korean</option>
+			<option value="ku_TR">Kurdish</option>
+			<option value="la_VA">Latin</option>
+			<option value="li_NL">Limburgish</option>
+			<option value="lt_LT">Lithuanian</option>
+			<option value="lv_LV">Latvian</option>
+			<option value="mg_MG">Malagasy</option>
+			<option value="mk_MK">Macedonian</option>
+			<option value="ml_IN">Malayalam</option>
+			<option value="mn_MN">Mongolian</option>
+			<option value="mr_IN">Marathi</option>
+			<option value="ms_MY">Malay</option>
+			<option value="mt_MT">Maltese</option>
+			<option value="nb_NO">Norwegian (bokmal)</option>
+			<option value="ne_NP">Nepali</option>
+			<option value="nl_BE">Dutch (Belgie)</option>
+			<option value="nl_NL">Dutch</option>
+			<option value="nn_NO">Norwegian (nynorsk)</option>
+			<option value="pa_IN">Punjabi</option>
+			<option value="pl_PL">Polish</option>
+			<option value="ps_AF">Pashto</option>
+			<option value="pt_BR">Portuguese (Brazil)</option>
+			<option value="pt_PT">Portuguese (Portugal)</option>
+			<option value="qu_PE">Quechua</option>
+			<option value="rm_CH">Romansh</option>
+			<option value="ro_RO">Romanian</option>
+			<option value="ru_RU">Russian</option>
+			<option value="sa_IN">Sanskrit</option>
+			<option value="se_NO">Northern Sami</option>
+			<option value="sk_SK">Slovak</option>
+			<option value="sl_SI">Slovenian</option>
+			<option value="so_SO">Somali</option>
+			<option value="sq_AL">Albanian</option>
+			<option value="sr_RS">Serbian</option>
+			<option value="sv_SE">Swedish</option>
+			<option value="sw_KE">Swahili</option>
+			<option value="sy_SY">Syriac</option>
+			<option value="ta_IN">Tamil</option>
+			<option value="te_IN">Telugu</option>
+			<option value="tg_TJ">Tajik</option>
+			<option value="th_TH">Thai</option>
+			<option value="tl_PH">Filipino</option>
+			<option value="tl_ST">Klingon</option>
+			<option value="tr_TR">Turkish</option>
+			<option value="tt_RU">Tatar</option>
+			<option value="uk_UA">Ukrainian</option>
+			<option value="ur_PK">Urdu</option>
+			<option value="uz_UZ">Uzbek</option>
+			<option value="vi_VN">Vietnamese</option>
+			<option value="xh_ZA">Xhosa</option>
+			<option value="yi_DE">Yiddish</option>
+			<option value="zh_CN">Simplified Chinese (China)</option>
+			<option value="zh_HK">Traditional Chinese (Hong Kong)</option>
+			<option value="zh_TW">Traditional Chinese (Taiwan)</option>
+			<option value="zu_ZA">Zulu</option>
+				</field>
+
+				<field name="spacer10" type="spacer" hr="true" />
+<field name="spacer11" type="spacer" class="text" label="--------VKONTAKTE COMMENTS--------"/>	
+				<field name="Vk" 
+					type="radio" 
+					default="1" 
+					label="PLG_SOCCOMMENTS_SHOW_VK_BUTTON" 
+					description="PLG_SOCCOMMENTS_SHOW_VK_BUTTON_DESC">
+					<option value="1">PLG_SOCCOMMENTS_YES</option>
+					<option value="0">PLG_SOCCOMMENTS_NO</option>
+				</field>
+				
+				<field name="vk_text"
+				    type="text" 
+				    default="ВКонтакте"
+				    label="PLG_SOCCOMMENTS_VK_TEXT" 
+				    description="PLG_SOCCOMMENTS_VK_TEXT_DESC" />
+				
+				<field name="vk_id" type="text" 
+					default="" 
+					label="PLG_SOCCOMMENTS_VK_ID" 
+					description="PLG_SOCCOMMENTS_VK_ID_DESC" />
+				
+ 				<field name="vk_width" type="text" 
+					default="500" 
+					label="PLG_SOCCOMMENTS_VK_WIDTH" 
+					description="PLG_SOCCOMMENTS_VK_WIDTH_DESC" />	
+
+				<field name="vk_num"
+				    type="text" default="10"
+				    label="PLG_SOCCOMMENTS_VK_NUM" 
+				    description="PLG_SOCCOMMENTS_VK_NUM_DESC" />	
+					
+                <field name="vk_order"
+				    type="text" default="2"
+				    label="PLG_SOCCOMMENTS_VK_ORDER" 
+				    description="PLG_SOCCOMMENTS_VK_ORDER_DESC" />
+
+
+				<field name="vk_attach" 
+					type="radio" 
+					default="false" 
+					label="PLG_SOCCOMMENTS_VK_ATTACH" 
+					description="PLG_SOCCOMMENTS_VK_ATTACH_DESC" >
+					<option value="*">PLG_SOCCOMMENTS_YES</option>
+					<option value="false">PLG_SOCCOMMENTS_NO</option>
+				</field>	
+
+				<field name="vk_pub" 
+					type="radio" 
+					default="1" 
+					label="PLG_SOCCOMMENTS_VK_PUB" 
+					description="PLG_SOCCOMMENTS_VK_PUB_DESC" >
+					<option value="1">PLG_SOCCOMMENTS_YES</option>
+					<option value="0">PLG_SOCCOMMENTS_NO</option>
+				</field>
+
+<field name="spacer12" type="spacer" hr="true" />	
+
+<field name="spacer13" type="spacer" class="text" label="-------DISQUS or JCOMMENTS-------"/>
+				<field name="Jc" 
+					type="radio" 
+					default="0" 
+					label="PLG_SOCCOMMENTS_SHOW_JC_BUTTON" 
+					description="PLG_SOCCOMMENTS_SHOW_JC_BUTTON_DESC">
+					<option value="1">PLG_SOCCOMMENTS_YES</option>
+					<option value="0">PLG_SOCCOMMENTS_NO</option>
+				</field>
+				
+	  <field name="comment_system" 
+					   type="list" 
+					   default="disqus" 
+					   label="PLG_SOCCOMMENTS_COMMENT_SYSTEM" 
+					   description="PLG_SOCCOMMENTS_COMMENT_SYSTEM_DESC">
+            <option value="disqus">Disqus</option>
+            <option value="jcomments">JComments</option>
+        </field>
+		
+<field name="disqus_subdomain" 
+		type="text" 
+		default="" 
+		label="PLG_SOCCOMMENTS_DISQUS_SUBDOMAIN" 
+		description="PLG_SOCCOMMENTS_DISQUS_SUBDOMAIN_DESC" />
+
+<field name="disqus_lang" 
+		type="text" 
+		default="en" 
+		label="PLG_SOCCOMMENTS_DISQUS_LANG" 
+		description="PLG_SOCCOMMENTS_DISQUS_LANG_DESC" />
+				
+				<field name="jc_text"
+				    type="text" 
+				    default="Disqus | JComments"
+				    label="PLG_SOCCOMMENTS_JC_TEXT" 
+				    description="PLG_SOCCOMMENTS_JC_TEXT_DESC" />
+					
+					<field name="jc_order"
+				    type="text" default="3"
+				    label="PLG_SOCCOMMENTS_JC_ORDER" 
+				    description="PLG_SOCCOMMENTS_JC_ORDER_DESC" />
+
+				<field name="spacer14" type="spacer" hr="true" />				
+				
+<field name="spacer19" type="spacer" class="text" label="--------DISPLAY OPTIONS--------"/>	
+	<field name="sc_show_text_com"
+					type="radio" 
+					default="1" 
+					label="PLG_SOCCOMMENTS_SHOW_TEXT_COM" 
+					description="PLG_SOCCOMMENTS_SHOW_TEXT_COM2">
+					<option value="1">PLG_SOCCOMMENTS_YES</option>
+					<option value="0">PLG_SOCCOMMENTS_NO</option>
+				</field>
+				<field name="sc_text_com"
+				    type="text" 
+				    default="Comments:"
+				    label="PLG_SOCCOMMENTS_SC_TEXT_COM" 
+				    description="PLG_SOCCOMMENTS_SC_TEXT_COM_DESC" />
+<field name="sc_font_com" type="text" 
+					default="16" 
+					label="PLG_SOCCOMMENTS_SC_FONT_COM" 
+					description="PLG_SOCCOMMENTS_SC_FONT_COM_DESC" />	
+<field name="sc_vkl" type="text" 
+					default="14" 
+					label="PLG_SOCCOMMENTS_VKL" 
+					description="PLG_SOCCOMMENTS_VKL_DESC" />
+<field name="sc_show_text_icon"
+					type="radio" 
+					default="1" 
+					label="PLG_SOCCOMMENTS_SHOW_TEXT_ICON" 
+					description="PLG_SOCCOMMENTS_SHOW_TEXT_ICON2">
+					<option value="1">PLG_SOCCOMMENTS_YES</option>
+					<option value="0">PLG_SOCCOMMENTS_NO</option>
+				</field>
+<field
+					name="sc_categories"
+					type="category"
+					extension="com_content"
+					multiple="true"
+					size="10"
+					default=""
+					label="PLG_SOCCOMMENTS_EXCLUDE_CATEGORIES" 
+					description="PLG_SOCCOMMENTS_EXCLUDE_CATEGORIES_DESC" >
+					</field>					
+				<field name="sc_articles" type="text" default="" label="PLG_SOCCOMMENTS_EXCLUDE_ARTICLE_ID" description="PLG_SOCCOMMENTS_EXCLUDE_ARTICLE_ID_DESC"/>
+                	
+				</fieldset>
+                <fieldset name="advanced">
+	<field name="cpr" 
+					type="radio" 
+					default="cpsc" 
+					label="PLG_SOCCOMMENTS_SHOW_CPR" 
+					description="PLG_SOCCOMMENTS_SHOW_CPR_DESC" >
+					<option value="cpsn">PLG_SOCCOMMENTS_YES</option>
+					<option value="cpsc">PLG_SOCCOMMENTS_NO</option>
+					</field>
+				</fieldset>
+		</fields> 
+	</config>
+</extension>
