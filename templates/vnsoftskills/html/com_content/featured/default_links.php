@@ -1,17 +1,24 @@
 <?php
+// Wright v.3 Override: Joomla 2.5.9
 /**
- * @version		$Id: default.php 22355 2011-11-07 05:11:58Z github_bot $
  * @package		Joomla.Site
- * @subpackage	mod_menu
- * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @subpackage	com_content
+ * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access.
+// no direct access
 defined('_JEXEC') or die;
-
-$app = JFactory::getApplication();
-
-require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
-include(Overrider::getOverride('com_content.featured','default_links'));
 ?>
+
+
+<h3><?php echo JText::_('COM_CONTENT_MORE_ARTICLES'); ?></h3>
+
+<ol<?php echo ' class="nav nav-list"'; // Wright v.3: More articles ?>>
+<?php foreach ($this->link_items as &$item) : ?>
+	<li>
+		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catslug)); ?>">
+			<?php echo $item->title; ?></a>
+	</li>
+<?php endforeach; ?>
+</ol>

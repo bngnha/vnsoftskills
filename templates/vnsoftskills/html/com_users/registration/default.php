@@ -1,17 +1,31 @@
 <?php
 /**
- * @version		$Id: default.php 22355 2011-11-07 05:11:58Z github_bot $
  * @package		Joomla.Site
- * @subpackage	mod_menu
- * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @subpackage	com_content
+ * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access.
+// no direct access
 defined('_JEXEC') or die;
+if (!function_exists("wright_joomla_users_registration")) :
 
-$app = JFactory::getApplication();
+	
+	
+	
+	function wright_joomla_users_registration($buffer) {
+		
+			$buffer = preg_replace('/ class="validate"/Ui', 'class="validate btn btn-primary" style=" margin-left:5px;"', $buffer);
+			$buffer = preg_replace('/ title="cancel"/Ui', 'title="cancel" class=" btn btn-primary" style=" margin-left:5px;"', $buffer);
+			
+			
+				return $buffer;
+				
+	}
 
-require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
-include(Overrider::getOverride('com_users.registration'));
-?>
+endif;
+
+ob_start("wright_joomla_users_registration");
+require('components/com_users/views/registration/tmpl/default.php');
+ob_end_flush();
+

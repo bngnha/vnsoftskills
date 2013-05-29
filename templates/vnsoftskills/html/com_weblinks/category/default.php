@@ -1,17 +1,31 @@
 <?php
 /**
- * @version		$Id: default.php 22355 2011-11-07 05:11:58Z github_bot $
  * @package		Joomla.Site
- * @subpackage	mod_menu
- * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @subpackage	com_content
+ * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access.
+// no direct access
 defined('_JEXEC') or die;
+if (!function_exists("wright_joomla_weblinks_category")) :
 
-$app = JFactory::getApplication();
+	
+	
+	
+	function wright_joomla_weblinks_category($buffer) {
+			$buffer = preg_replace('/<h2>/Ui', '<div class="page-header"> <h2>', $buffer);
+			$buffer = preg_replace('/<\/h2>/Ui', '</h2> </div>', $buffer);
+			$buffer = preg_replace('/<table class="category">/Ui', '<table class="category table table-striped">', $buffer);
+			$buffer = preg_replace('/<span class="item-title">/Ui', '<span class="item-title"><i class="icon-folder-close"> </i>', $buffer);
+			$buffer = preg_replace('/<dl>/Ui', '<dl class="label label-info">', $buffer);
+				return $buffer;
+				
+	}
 
-require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
-include(Overrider::getOverride('com_weblinks.category'));
-?>
+endif;
+
+ob_start("wright_joomla_weblinks_category");
+require('components/com_weblinks/views/category/tmpl/default.php');
+ob_end_flush();
+

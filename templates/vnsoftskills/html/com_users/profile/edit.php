@@ -1,17 +1,32 @@
 <?php
 /**
- * @version		$Id: default.php 22355 2011-11-07 05:11:58Z github_bot $
  * @package		Joomla.Site
- * @subpackage	mod_menu
- * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @subpackage	com_content
+ * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access.
+// no direct access
 defined('_JEXEC') or die;
+if (!function_exists("wright_joomla_users_profile")) :
 
-$app = JFactory::getApplication();
+	
+	
+	
+	function wright_joomla_users_profile($buffer) {
+		
+			$buffer = preg_replace('/title="Cancel"/Ui', 'title="Cancel" class="button btn " style=" margin-left:5px;"', $buffer);
+			$buffer = preg_replace('/class="validate"/Ui', 'class="validate btn " style=" margin-left:5px;"', $buffer);
+			
+			$buffer = preg_replace('/title="">/Ui', ' title=""> <i class="icon-folder-close"> </i>', $buffer);
+	
+				return $buffer;
+				
+	}
 
-require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
-include(Overrider::getOverride('com_users.profile', 'edit'));
-?>
+endif;
+
+ob_start("wright_joomla_users_profile");
+require('components/com_users/views/profile/tmpl/edit.php');
+ob_end_flush();
+
