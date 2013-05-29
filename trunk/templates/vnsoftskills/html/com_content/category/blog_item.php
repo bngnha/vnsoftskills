@@ -233,7 +233,7 @@ JHtml::_('behavior.framework');
 	endif;
 ?>
 		<p class="readmore">
-				<a href="<?php echo $link; ?>"<?php echo ' class="btn"' // Wright v.3: Readmore ?>>
+				<a href="<?php echo $link; ?>"<?php //echo ' class="btn"' // Wright v.3: Readmore ?>>
 					<?php if (!$params->get('access-view')) :
 						echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
 					elseif ($readmore = $this->item->alternative_readmore) :
