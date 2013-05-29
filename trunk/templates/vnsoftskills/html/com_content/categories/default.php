@@ -1,17 +1,26 @@
 <?php
 /**
- * @version		$Id: default.php 22355 2011-11-07 05:11:58Z github_bot $
  * @package		Joomla.Site
- * @subpackage	mod_menu
- * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @subpackage	com_content
+ * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access.
+// no direct access
 defined('_JEXEC') or die;
+if (!function_exists("wright_joomla_content_categories")) :
+	
+	function wright_joomla_content_categories($buffer) {
+		
+		
+		$buffer = preg_replace('/<span class="item-title">/Ui', '<span class="item-title"><i class="icon-folder-open"></i>', $buffer);
+		$buffer = preg_replace('/<dl>/Ui', '<dl class="label label-info">', $buffer);
+		return $buffer;
+	}
 
-$app = JFactory::getApplication();
+endif;
 
-require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
-include(Overrider::getOverride('com_content.categories'));
+ob_start("wright_joomla_content_categories");
+require('components/com_content/views/categories/tmpl/default.php');
+ob_end_flush();
 ?>
