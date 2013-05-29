@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.7" type="package" method="upgrade">
+	<name>SocComments</name>
+	<author>tallib</author>
+	<creationDate>March 2012</creationDate>
+	<url>http://freejoom.ru</url>
+	<copyright>Copyright (C) 2012 tallib. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>1.3</version>
+	<packagename>soccomments</packagename>
+	<packager>tallib</packager>
+	<packagerurl>http://freejoom.ru</packagerurl>
+	<description>
+		<![CDATA[Installed version 1.3. Download the latest version of the plugin --> <a target='_blank' href='http://freejoom.ru/soccomments.html'>SocComments Plugin</a><br />The plugin lets you add comments to articles on the following social networks and extensions:<br/><br/>*Facebook<br/>*VK.com<br/>*Disqus<br/>*JComments<br/><strong>To use the form JComments comments must be installed component Jcomments</strong><br />For subdomain (shortname) in Disqus the register your site <a href="http://docs.disqus.com/help/68/" target="_blank"> here </ a><br/><br/><strong>Donate (PayPal):</strong><br/><a href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8B95P4EC56DSY' target='_blank'>Go to PayPal</a><br/><br/><strong>Comment moderation:</strong><br/>For moderation comment, you must enter a user name and password in the social networking site Facebook and Vkontakte, and then in the forms of comments from the social networks will have additional links to manage comments. If you entered an account that is not the moderator, a link will be hidden.<br/>For moderation of comments from JComments, you need to log in and go to adminpanel component JComments<br/><br/><strong> How to get APP ID?</strong><br/>For APP ID for the forms you need to log in social network and click on the link:<br/><strong>for Facebook</strong> <a href="https://developers.facebook.com/apps" target="_blank">https://developers.facebook.com/apps</a> creating an application using the instructions Facebook<br/> <strong>for Vkontakte</strong> <a href="http://vkontakte.ru/developers.php?oid=-1&p=Comments" target="_blank">http://vkontakte.ru/developers.php?oid=-1&p=Comments</a> indicating the address of the site and creating the application. Example: APP ID will VK.init ({apiId: <strong>2221835</strong>, onlyWidgets: true});]]>
+	</description>
+	<files folder="packages">
+		<file type="plugin" id="soccomments" group="system">plg_system_soccomments_J17-25v13.zip</file>
+		<file type="plugin" id="soccomments" group="content">plg_soccomments_J17-25v13.zip</file>
+	</files>
+</extension>
