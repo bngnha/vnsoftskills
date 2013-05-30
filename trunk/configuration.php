@@ -31,7 +31,7 @@ class JConfig {
 	public $offset = 'UTC';
 	public $mailer = 'mail';
 	public $mailfrom = 'bngnha@gmail.com';
-	public $fromname = 'Vn Soft Skills';
+	public $fromname = 'VN Soft Skills';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
 	public $smtpuser = '';
