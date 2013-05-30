@@ -214,6 +214,16 @@ endif; ?>
 		<i class="icon-eye-open"></i> <?php // Wright v.3: Hits icon ?>
 	<?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $this->item->hits); ?>
 	</dd>
+
+	<!--vnsoftskills add -->
+<?php if (isset($this->item->disqusArticleCounterLink)) : ?>
+	<dd class="jwDisqusArticleCounter">
+		<span id="startOfPage"></span>
+		<?php echo $this->item->disqusArticleCounterLink; ?>
+	</dd>
+<?php endif; ?>
+	<!--vnsoftskills add -->
+
 <?php endif; ?>
 <?php if ($useDefList) : ?>
 	</dl>
