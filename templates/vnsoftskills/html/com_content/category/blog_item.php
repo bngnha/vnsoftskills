@@ -181,6 +181,14 @@ JHtml::_('behavior.framework');
 		<?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', $this->item->hits); ?>
 		</dd>
 <?php endif; ?>
+<!--vnsoftskills add -->
+<?php if (isset($this->item->disqusArticleCounterLink)) : ?>
+	<dd class="jwDisqusArticleCounter">
+		<span id="startOfPage"></span>
+		<?php echo $this->item->disqusArticleCounterLink; ?>
+	</dd>
+<?php endif; ?>
+<!--vnsoftskills add -->
 <?php if (($params->get('show_author')) or ($params->get('show_category')) or ($params->get('show_create_date')) or ($params->get('show_modify_date')) or ($params->get('show_publish_date')) or ($params->get('show_parent_category')) or ($params->get('show_hits'))) :?>
  	</dl>
 <?php endif; ?>

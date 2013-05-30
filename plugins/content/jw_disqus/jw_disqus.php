@@ -168,7 +168,7 @@ class plgContentJw_disqus extends JPlugin {
 		$itemURLbrowser = $itemURLbrowser[0];
 
 		// Article URL assignments
-		$output->itemURL 					= $websiteURL.$itemURL;
+		$output->itemURL 			= $websiteURL.$itemURL;
 		$output->itemURLrelative 	= $itemURL;
 		$output->itemURLbrowser		= $itemURLbrowser;
 		$output->disqusIdentifier = substr(md5($disqusSubDomain),0,10).'_id'.$row->id;
@@ -246,6 +246,14 @@ class plgContentJw_disqus extends JPlugin {
 				ob_end_clean();
 
 				// Output
+
+				// vnsoftskills add
+				if($disqusArticleCounter)
+				{
+					$row->disqusArticleCounterLink = '<a class="jwDisqusArticleCounterLink" href="'.$output->itemURL.'#disqus_thread" data-disqus-identifier="'. $output->disqusIdentifier.'">'. JText::_("JW_DISQUS_VIEW_COMMENTS").'</a>';
+				}
+				// vnsoftskills add
+
 				$row->text = $getArticleTemplate;
 
 			} else if($disqusListingCounter && (($option=='com_content' && ($view=='frontpage' || $view=="featured" || $view=='section' || $view=='category')) || $parsedInModule==1)) {
@@ -260,6 +268,10 @@ class plgContentJw_disqus extends JPlugin {
 				include($dsqListingPath);
 				$getListingTemplate = $this->plg_copyrights_start.ob_get_contents().$this->plg_copyrights_end;
 				ob_end_clean();
+
+				// vnsoftskills add
+				$row->disqusArticleCounterLink = '<a class="jwDisqusArticleCounterLink" href="'.$output->itemURL.'#disqus_thread" data-disqus-identifier="'. $output->disqusIdentifier.'">'. JText::_("JW_DISQUS_VIEW_COMMENTS").'</a>';
+				// vnsoftskills add
 
 				// Output
 				$row->text = $getListingTemplate;
