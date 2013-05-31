@@ -10,11 +10,9 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-jimport( 'joomla.plugin.plugin' );
-jimport('joomla.html.parameter');
-//if(version_compare(JVERSION, '1.6.0', 'ge')) {
-
-//}
+if(version_compare(JVERSION, '1.6.0', 'ge')) {
+	jimport('joomla.html.parameter');
+}
 
 class plgContentJw_disqus extends JPlugin {
 
@@ -36,7 +34,7 @@ class plgContentJw_disqus extends JPlugin {
 	function onContentBeforeDisplay($context, &$row, &$params, $limitstart = 0 ){
 		// Requests
 		$option = JRequest::getCmd('option');
-		$view 	= JRequest::getCmd('view');		
+		$view 	= JRequest::getCmd('view');
 		if($view == 'category' || $view == 'featured'){
 			$this->onContentPrepare('com_content.article', $row, $params, $limitstart );
 		}
@@ -87,8 +85,6 @@ class plgContentJw_disqus extends JPlugin {
 		}
 		if(!$row->id || $option=='com_rokdownloads') return;
 
-
-
 		// ----------------------------------- Get plugin parameters -----------------------------------
 		$plugin = JPluginHelper::getPlugin('content', $this->plg_name);
 		$pluginParams = new JParameter( $plugin->params );
@@ -102,7 +98,7 @@ class plgContentJw_disqus extends JPlugin {
 		$disqusDevMode				= $pluginParams->get('disqusDevMode',0);
 
 		// External parameter for controlling plugin layout within modules
-		if(!$params) $params = new JParameter(null);
+		if(!$params) $params = new JParameter();
 		$parsedInModule = $params->get('parsedInModule');
 		
 		if(!$disqusSubDomain){
@@ -114,10 +110,7 @@ class plgContentJw_disqus extends JPlugin {
 			$disqusSubDomain = str_replace(array('http://','.disqus.com/','.disqus.com'), array('','',''), $disqusSubDomain);
 		}
 
-
-
 		// ----------------------------------- Before plugin render -----------------------------------
-		
 		// Get the current category
 		$currectCategory = $row->catid;
 		
@@ -137,10 +130,7 @@ class plgContentJw_disqus extends JPlugin {
 			$menus = $selectedMenus;
 		}
 
-
-
 		// ----------------------------------- Prepare elements -----------------------------------
-
 		// Includes
 		require_once(dirname(__FILE__).DS.$this->plg_name.DS.'includes'.DS.'helper.php');
 		require_once(JPATH_SITE.DS.'components'.DS.'com_content'.DS.'helpers'.DS.'route.php');
@@ -198,8 +188,6 @@ class plgContentJw_disqus extends JPlugin {
 			</noscript>
 			";
 		}
-		
-
 
 		// ----------------------------------- Render the output -----------------------------------
 		if(in_array($currectCategory,$categories) && in_array($itemid,$menus)){
@@ -246,7 +234,6 @@ class plgContentJw_disqus extends JPlugin {
 				ob_end_clean();
 
 				// Output
-
 				// vnsoftskills add
 				if($disqusArticleCounter)
 				{
@@ -275,11 +262,7 @@ class plgContentJw_disqus extends JPlugin {
 
 				// Output
 				$row->text = $getListingTemplate;
-
 			}
-
 		} // END IF
-
 	} // END FUNCTION
-
 } // END CLASS
